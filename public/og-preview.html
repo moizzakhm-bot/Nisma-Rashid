@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>OG Preview Card - Seamless Dark Green Vignette</title>
+  <title>OG Preview Card - Frost Silver Dark Green Vignette</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -54,18 +54,18 @@
       pointer-events: none;
     }
 
-    /* Ambient Floating Starlight Particles */
+    /* Ambient Floating Frost Starlight Particles */
     .starlight {
       position: absolute;
       border-radius: 50%;
       pointer-events: none;
     }
-    .star-1 { width: 3.5px; height: 3.5px; background: #FFE58F; top: 110px; left: 190px; opacity: 0.6; box-shadow: 0 0 10px #FFE58F; }
-    .star-2 { width: 2.5px; height: 2.5px; background: #FFF; top: 190px; left: 270px; opacity: 0.45; box-shadow: 0 0 8px #FFF; }
-    .star-3 { width: 4.5px; height: 4.5px; background: #FFE58F; top: 130px; right: 210px; opacity: 0.65; box-shadow: 0 0 12px #FFE58F; }
-    .star-4 { width: 3px; height: 3px; background: #FFF; top: 500px; left: 230px; opacity: 0.45; box-shadow: 0 0 8px #FFF; }
-    .star-5 { width: 3.5px; height: 3.5px; background: #FFE58F; top: 470px; right: 250px; opacity: 0.55; box-shadow: 0 0 10px #FFE58F; }
-    .star-6 { width: 2.5px; height: 2.5px; background: #FFF; top: 310px; right: 170px; opacity: 0.45; }
+    .star-1 { width: 3.5px; height: 3.5px; background: #FFFFFF; top: 110px; left: 190px; opacity: 0.55; box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); }
+    .star-2 { width: 2.5px; height: 2.5px; background: #E2E8F0; top: 190px; left: 270px; opacity: 0.45; box-shadow: 0 0 8px #FFF; }
+    .star-3 { width: 4.5px; height: 4.5px; background: #FFFFFF; top: 130px; right: 210px; opacity: 0.6; box-shadow: 0 0 12px rgba(255, 255, 255, 0.8); }
+    .star-4 { width: 3px; height: 3px; background: #E2E8F0; top: 500px; left: 230px; opacity: 0.45; box-shadow: 0 0 8px #FFF; }
+    .star-5 { width: 3.5px; height: 3.5px; background: #FFFFFF; top: 470px; right: 250px; opacity: 0.5; box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); }
+    .star-6 { width: 2.5px; height: 2.5px; background: #E2E8F0; top: 310px; right: 170px; opacity: 0.4; }
 
     /* Central Content Box - Strictly 680px for perfect WhatsApp Web square-crop */
     .content-box {
@@ -78,46 +78,13 @@
       z-index: 10;
     }
 
-    /* Royal Bridal Monogram Badge */
-    .monogram-badge {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 8px;
-    }
-    .monogram-wing {
-      width: 55px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(236, 195, 90, 0.55));
-    }
-    .monogram-wing.right {
-      background: linear-gradient(270deg, transparent, rgba(236, 195, 90, 0.55));
-    }
-    .monogram-circle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      border: 1px solid rgba(236, 195, 90, 0.55);
-      background: radial-gradient(circle, #09331a 0%, #03170b 100%);
-      box-shadow: 0 0 14px rgba(236, 195, 90, 0.3);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 13px;
-      font-weight: 600;
-      color: #FFE58F;
-      letter-spacing: 0.1em;
-    }
-
     /* Bismillah Calligraphy */
     .bismillah {
       font-family: 'Amiri', serif;
       font-size: 44px;
       color: #FAF5E8;
       letter-spacing: 0.04em;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       text-shadow: 
         0 0 30px rgba(250, 245, 232, 0.5),
         0 3px 12px rgba(0, 0, 0, 0.9);
@@ -140,26 +107,27 @@
       letter-spacing: 0.4em;
       text-transform: uppercase;
       color: #A3BFB0;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       font-weight: 500;
       text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
     }
 
-    /* Luxury Gold Divider */
+    /* Frost Silver Divider */
     .divider {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 260px;
-      margin: 0 auto 16px;
+      margin: 0 auto 18px;
+      opacity: 0.85;
     }
     .divider-line {
       flex: 1;
       height: 1px;
-      background: linear-gradient(90deg, transparent, #ECC35A);
+      background: linear-gradient(90deg, transparent, rgba(226, 232, 240, 0.7));
     }
     .divider-line.right {
-      background: linear-gradient(270deg, transparent, #ECC35A);
+      background: linear-gradient(270deg, transparent, rgba(226, 232, 240, 0.7));
     }
     .divider-center {
       display: flex;
@@ -171,24 +139,24 @@
       width: 3px;
       height: 3px;
       border-radius: 50%;
-      background: #ECC35A;
-      box-shadow: 0 0 4px #ECC35A;
+      background: rgba(226, 232, 240, 0.8);
+      box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
     }
     .divider-diamond {
       width: 8px;
       height: 8px;
-      border: 1px solid #FFE58F;
+      border: 1px solid rgba(248, 250, 252, 0.8);
       background: #092e18;
       transform: rotate(45deg);
-      box-shadow: 0 0 8px rgba(236, 195, 90, 0.6);
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
     }
 
-    /* Stately Couple Names with Luminous Glow */
+    /* Stately Couple Names in Frost Silver */
     .couple-names {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
     .name {
       font-family: 'Cormorant Garamond', 'Palatino Linotype', 'Georgia', serif;
@@ -204,12 +172,10 @@
     .ampersand {
       font-family: 'Cormorant Garamond', 'Palatino Linotype', serif;
       font-style: italic;
-      font-size: 42px;
-      margin: -4px 0;
-      background: linear-gradient(135deg, #FFF6D8 0%, #ECC35A 50%, #C99A24 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 0 14px rgba(236, 195, 90, 0.7));
+      font-size: 38px;
+      margin: -2px 0;
+      color: rgba(226, 232, 240, 0.85);
+      text-shadow: 0 0 16px rgba(255, 255, 255, 0.4);
     }
 
     /* Celebration & Details */
@@ -224,20 +190,20 @@
       font-size: 22px;
       color: rgba(245, 240, 225, 0.95);
       letter-spacing: 0.08em;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
     }
 
-    /* Gold-Bordered Date Badge */
+    /* Frost Silver Date Badge */
     .date-badge {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       padding: 6px 24px;
-      border: 1px solid rgba(236, 195, 90, 0.4);
+      border: 1px solid rgba(226, 232, 240, 0.32);
       border-radius: 9999px;
       background: rgba(4, 26, 13, 0.65);
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(236, 195, 90, 0.12);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(255, 255, 255, 0.08);
       margin-bottom: 8px;
     }
     .date-text {
@@ -245,7 +211,7 @@
       font-size: 13px;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: #FFF;
+      color: #F8FAFC;
       font-weight: 600;
     }
 
@@ -265,7 +231,7 @@
     <div class="bg-texture"></div>
     <div class="vignette-layer"></div>
 
-    <!-- Ambient Floating Stars -->
+    <!-- Ambient Floating Frost Stars -->
     <div class="starlight star-1"></div>
     <div class="starlight star-2"></div>
     <div class="starlight star-3"></div>
@@ -273,21 +239,14 @@
     <div class="starlight star-5"></div>
     <div class="starlight star-6"></div>
 
-    <!-- Central Content Box (Zero borders, seamless edge blend) -->
+    <!-- Central Content Box (Zero borders, zero gold, pure frost silver) -->
     <div class="content-box">
-      <!-- Monogram Crest -->
-      <div class="monogram-badge">
-        <div class="monogram-wing"></div>
-        <div class="monogram-circle">N &amp; R</div>
-        <div class="monogram-wing right"></div>
-      </div>
-
       <!-- Bismillah Arabic Calligraphy -->
       <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
       <div class="sub-blessing">With the Blessings of the Almighty</div>
       <div class="families">TOGETHER WITH THEIR FAMILIES</div>
 
-      <!-- Multi-Layer Gold Divider -->
+      <!-- Frost Silver Divider -->
       <div class="divider">
         <div class="divider-line"></div>
         <div class="divider-center">
@@ -305,7 +264,7 @@
         <div class="name">Mohammed Rashid</div>
       </div>
 
-      <!-- Event Details & Gold-Bordered Date Badge -->
+      <!-- Event Details & Frost Silver Date Badge -->
       <div class="details">
         <div class="celebration">A Celebration of Nikah</div>
         <div class="date-badge">
