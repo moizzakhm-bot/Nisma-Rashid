@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>OG Image Generator</title>
+  <title>OG Preview Card</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -16,149 +16,199 @@
       width: 1200px;
       height: 630px;
       overflow: hidden;
-      background-color: #030d06;
+      background-color: #020f06;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      color: #E2E8F0;
+      color: #F8FAFC;
     }
     .og-container {
       width: 1200px;
       height: 630px;
       position: relative;
-      background: radial-gradient(ellipse at 50% 35%, #082917 0%, #031409 60%, #010603 100%);
+      background: radial-gradient(ellipse at 50% 46%, #0f4024 0%, #082816 55%, #03140a 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 40px;
+      padding: 30px;
       text-align: center;
     }
-    /* Outer Concentric Hairline Frame */
+    .bg-texture {
+      position: absolute;
+      inset: 0;
+      background-image: url('./bg-emerald.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.45;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    /* Outer Concentric Hairline Frame with Champagne Gold Accent */
     .outer-frame {
       position: absolute;
-      inset: 24px;
-      border: 1px solid rgba(226, 232, 240, 0.35);
-      border-radius: 24px;
+      inset: 22px;
+      border: 1px solid rgba(230, 205, 140, 0.38);
+      border-radius: 20px;
       pointer-events: none;
+      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
     }
     /* Inner Concentric Hairline Frame */
     .inner-frame {
       position: absolute;
-      inset: 34px;
-      border: 1px solid rgba(226, 232, 240, 0.16);
-      border-radius: 16px;
+      inset: 32px;
+      border: 1px solid rgba(230, 205, 140, 0.18);
+      border-radius: 14px;
       pointer-events: none;
     }
-    /* Corner Diamond Accents */
+
+    /* Corner Diamond Flourishes */
     .corner-diamond {
       position: absolute;
-      width: 8px;
-      height: 8px;
-      border: 1px solid rgba(245, 215, 127, 0.6);
+      width: 10px;
+      height: 10px;
+      border: 1px solid #ECC35A;
       transform: rotate(45deg);
-      background: #082917;
+      background: #062312;
+      box-shadow: 0 0 10px rgba(236, 195, 90, 0.4);
     }
-    .top-left { top: 30px; left: 30px; }
-    .top-right { top: 30px; right: 30px; }
-    .bottom-left { bottom: 30px; left: 30px; }
-    .bottom-right { bottom: 30px; right: 30px; }
+    .top-left { top: 27px; left: 27px; }
+    .top-right { top: 27px; right: 27px; }
+    .bottom-left { bottom: 27px; left: 27px; }
+    .bottom-right { bottom: 27px; right: 27px; }
+
+    /* Central Content Box - strictly contained within 680px for perfect square-crop compatibility */
+    .content-box {
+      width: 680px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
 
     .bismillah {
       font-family: 'Amiri', serif;
-      font-size: 40px;
-      color: #F8FAFC;
+      font-size: 42px;
+      color: #FAF5E8;
       letter-spacing: 0.05em;
-      margin-bottom: 8px;
-      text-shadow: 0 0 20px rgba(255, 255, 255, 0.35);
+      margin-bottom: 6px;
+      text-shadow: 0 0 25px rgba(250, 245, 232, 0.45), 0 2px 8px rgba(0, 0, 0, 0.8);
+      line-height: 1.2;
     }
     .sub-blessing {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Palatino Linotype', 'Georgia', serif;
       font-style: italic;
       font-size: 20px;
-      color: rgba(226, 232, 240, 0.85);
+      color: rgba(245, 240, 225, 0.9);
       font-weight: 300;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       margin-bottom: 4px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
     }
     .families {
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 11px;
-      letter-spacing: 0.35em;
+      letter-spacing: 0.38em;
       text-transform: uppercase;
-      color: #94A3B8;
-      margin-bottom: 22px;
+      color: #9BB3A4;
+      margin-bottom: 16px;
+      font-weight: 500;
     }
-    /* Diamond Divider */
+
+    /* Ornate Filigree Gold Divider */
     .divider {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 240px;
-      margin: 0 auto 24px;
-      opacity: 0.75;
+      width: 220px;
+      margin: 0 auto 16px;
+      opacity: 0.85;
     }
     .divider-line {
       flex: 1;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(226, 232, 240, 0.4));
+      background: linear-gradient(90deg, transparent, rgba(236, 195, 90, 0.7));
     }
     .divider-line.right {
-      background: linear-gradient(270deg, transparent, rgba(226, 232, 240, 0.4));
+      background: linear-gradient(270deg, transparent, rgba(236, 195, 90, 0.7));
     }
     .divider-diamond {
       width: 7px;
       height: 7px;
-      border: 1px solid rgba(226, 232, 240, 0.5);
-      background: #082213;
+      border: 1px solid #ECC35A;
+      background: #092C18;
       transform: rotate(45deg);
-      margin: 0 12px;
+      margin: 0 10px;
+      box-shadow: 0 0 8px rgba(236, 195, 90, 0.5);
     }
-    /* Couple Names */
+
+    /* Stately Couple Names */
     .couple-names {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
     .name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 64px;
+      font-family: 'Cormorant Garamond', 'Palatino Linotype', 'Georgia', serif;
+      font-size: 72px;
       font-weight: 500;
-      color: #F8FAFC;
-      letter-spacing: 0.04em;
-      line-height: 1.1;
-      text-shadow: 0 0 25px rgba(226, 232, 240, 0.4), 0 0 50px rgba(255, 255, 255, 0.2);
+      color: #FFFFFF;
+      letter-spacing: 0.035em;
+      line-height: 1.05;
+      text-shadow: 
+        0 0 25px rgba(255, 255, 255, 0.4),
+        0 0 50px rgba(230, 205, 140, 0.25),
+        0 4px 12px rgba(0, 0, 0, 0.9);
     }
     .ampersand {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Palatino Linotype', 'Georgia', serif;
       font-style: italic;
-      font-size: 38px;
-      color: #E5BE53;
+      font-size: 40px;
+      color: #ECC35A;
       margin: -2px 0;
-      text-shadow: 0 0 15px rgba(229, 190, 83, 0.5);
+      text-shadow: 0 0 16px rgba(236, 195, 90, 0.6);
     }
+
+    /* Event Details */
     .details {
-      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .celebration {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Palatino Linotype', 'Georgia', serif;
       font-style: italic;
-      font-size: 20px;
-      color: rgba(226, 232, 240, 0.9);
+      font-size: 22px;
+      color: rgba(245, 240, 225, 0.95);
       letter-spacing: 0.08em;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
     }
-    .date-venue {
+    .date {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px;
-      letter-spacing: 0.28em;
+      font-size: 13.5px;
+      letter-spacing: 0.32em;
       text-transform: uppercase;
-      color: #E2E8F0;
+      color: #F8FAFC;
+      font-weight: 600;
+      margin-bottom: 5px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+    .venue {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11.5px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: #A3BFB0;
       font-weight: 500;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
     }
   </style>
 </head>
 <body>
   <div class="og-container">
+    <div class="bg-texture"></div>
     <div class="outer-frame"></div>
     <div class="inner-frame"></div>
     <div class="corner-diamond top-left"></div>
@@ -166,25 +216,28 @@
     <div class="corner-diamond bottom-left"></div>
     <div class="corner-diamond bottom-right"></div>
 
-    <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-    <div class="sub-blessing">With the Blessings of the Almighty</div>
-    <div class="families">TOGETHER WITH THEIR FAMILIES</div>
+    <div class="content-box">
+      <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+      <div class="sub-blessing">With the Blessings of the Almighty</div>
+      <div class="families">TOGETHER WITH THEIR FAMILIES</div>
 
-    <div class="divider">
-      <div class="divider-line"></div>
-      <div class="divider-diamond"></div>
-      <div class="divider-line right"></div>
-    </div>
+      <div class="divider">
+        <div class="divider-line"></div>
+        <div class="divider-diamond"></div>
+        <div class="divider-line right"></div>
+      </div>
 
-    <div class="couple-names">
-      <div class="name">Nisma Ayisha</div>
-      <div class="ampersand">&amp;</div>
-      <div class="name">Mohammed Rashid</div>
-    </div>
+      <div class="couple-names">
+        <div class="name">Nisma Ayisha</div>
+        <div class="ampersand">&amp;</div>
+        <div class="name">Mohammed Rashid</div>
+      </div>
 
-    <div class="details">
-      <div class="celebration">A Celebration of Nikah</div>
-      <div class="date-venue">SUNDAY 13 DECEMBER 2026 • SAGAR AUDITORIUM, PANEMANGALORE</div>
+      <div class="details">
+        <div class="celebration">A Celebration of Nikah</div>
+        <div class="date">SUNDAY, 13 DECEMBER 2026</div>
+        <div class="venue">SAGAR AUDITORIUM • PANEMANGALORE</div>
+      </div>
     </div>
   </div>
 </body>
