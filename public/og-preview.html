@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>OG Preview Card</title>
+  <title>OG Preview Card - Ultra Luxury</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -16,7 +16,7 @@
       width: 1200px;
       height: 630px;
       overflow: hidden;
-      background-color: #020f06;
+      background-color: #020d06;
       font-family: 'Plus Jakarta Sans', sans-serif;
       color: #F8FAFC;
     }
@@ -24,183 +24,272 @@
       width: 1200px;
       height: 630px;
       position: relative;
-      background: radial-gradient(ellipse at 50% 46%, #0f4024 0%, #082816 55%, #03140a 100%);
+      /* Rich, deep emerald multi-stop lighting transition */
+      background: 
+        radial-gradient(circle at 50% 48%, rgba(20, 80, 45, 0.85) 0%, rgba(9, 45, 24, 0.92) 42%, rgba(4, 24, 12, 0.98) 75%, #010a04 100%),
+        url('./bg-emerald.jpg');
+      background-size: cover;
+      background-position: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 30px;
+      padding: 24px;
       text-align: center;
     }
+
     .bg-texture {
       position: absolute;
       inset: 0;
       background-image: url('./bg-emerald.jpg');
       background-size: cover;
       background-position: center;
-      opacity: 0.45;
+      opacity: 0.35;
       mix-blend-mode: screen;
       pointer-events: none;
     }
 
-    /* Outer Concentric Hairline Frame with Champagne Gold Accent */
+    /* Floating Golden Ambient Dust / Starlight Glow */
+    .starlight {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(1px);
+    }
+    .star-1 { width: 4px; height: 4px; background: #FFE58F; top: 120px; left: 180px; opacity: 0.6; box-shadow: 0 0 10px #FFE58F; }
+    .star-2 { width: 3px; height: 3px; background: #FFF; top: 200px; left: 260px; opacity: 0.5; box-shadow: 0 0 8px #FFF; }
+    .star-3 { width: 5px; height: 5px; background: #FFE58F; top: 140px; right: 200px; opacity: 0.7; box-shadow: 0 0 12px #FFE58F; }
+    .star-4 { width: 3px; height: 3px; background: #FFF; top: 480px; left: 220px; opacity: 0.5; box-shadow: 0 0 8px #FFF; }
+    .star-5 { width: 4px; height: 4px; background: #FFE58F; top: 450px; right: 240px; opacity: 0.6; box-shadow: 0 0 10px #FFE58F; }
+    .star-6 { width: 3px; height: 3px; background: #FFF; top: 320px; right: 160px; opacity: 0.5; }
+
+    /* Concentric Multi-Tier Gold & Frost Borders */
     .outer-frame {
       position: absolute;
-      inset: 22px;
-      border: 1px solid rgba(230, 205, 140, 0.38);
+      inset: 18px;
+      border: 1px solid rgba(236, 195, 90, 0.4);
       border-radius: 20px;
       pointer-events: none;
-      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
     }
-    /* Inner Concentric Hairline Frame */
+    .middle-frame {
+      position: absolute;
+      inset: 26px;
+      border: 1px dashed rgba(236, 195, 90, 0.22);
+      border-radius: 15px;
+      pointer-events: none;
+    }
     .inner-frame {
       position: absolute;
-      inset: 32px;
-      border: 1px solid rgba(230, 205, 140, 0.18);
-      border-radius: 14px;
+      inset: 34px;
+      border: 1px solid rgba(226, 232, 240, 0.16);
+      border-radius: 12px;
       pointer-events: none;
     }
 
-    /* Corner Diamond Flourishes */
-    .corner-diamond {
+    /* Ornate Arabesque Corner Filigree SVGs */
+    .corner-flourish {
       position: absolute;
-      width: 10px;
-      height: 10px;
-      border: 1px solid #ECC35A;
-      transform: rotate(45deg);
-      background: #062312;
-      box-shadow: 0 0 10px rgba(236, 195, 90, 0.4);
+      width: 48px;
+      height: 48px;
+      pointer-events: none;
+      color: #ECC35A;
+      opacity: 0.85;
     }
-    .top-left { top: 27px; left: 27px; }
-    .top-right { top: 27px; right: 27px; }
-    .bottom-left { bottom: 27px; left: 27px; }
-    .bottom-right { bottom: 27px; right: 27px; }
+    .flourish-tl { top: 22px; left: 22px; }
+    .flourish-tr { top: 22px; right: 22px; transform: scaleX(-1); }
+    .flourish-bl { bottom: 22px; left: 22px; transform: scaleY(-1); }
+    .flourish-br { bottom: 22px; right: 22px; transform: scale(-1); }
 
-    /* Central Content Box - strictly contained within 680px for perfect square-crop compatibility */
+    /* Central Content Box - Strictly 680px for perfect WhatsApp Web square-crop */
     .content-box {
       width: 680px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      position: relative;
       z-index: 10;
     }
 
+    /* Royal Bridal Monogram Badge */
+    .monogram-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .monogram-wing {
+      width: 50px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(236, 195, 90, 0.6));
+    }
+    .monogram-wing.right {
+      background: linear-gradient(270deg, transparent, rgba(236, 195, 90, 0.6));
+    }
+    .monogram-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid rgba(236, 195, 90, 0.6);
+      background: radial-gradient(circle, #0e4023 0%, #062312 100%);
+      box-shadow: 0 0 12px rgba(236, 195, 90, 0.35);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #FFE58F;
+      letter-spacing: 0.1em;
+    }
+
+    /* Bismillah Calligraphy */
     .bismillah {
       font-family: 'Amiri', serif;
-      font-size: 42px;
+      font-size: 44px;
       color: #FAF5E8;
-      letter-spacing: 0.05em;
-      margin-bottom: 6px;
-      text-shadow: 0 0 25px rgba(250, 245, 232, 0.45), 0 2px 8px rgba(0, 0, 0, 0.8);
-      line-height: 1.2;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+      text-shadow: 
+        0 0 25px rgba(250, 245, 232, 0.5),
+        0 2px 8px rgba(0, 0, 0, 0.9);
+      line-height: 1.15;
     }
+
     .sub-blessing {
-      font-family: 'Cormorant Garamond', 'Palatino Linotype', 'Georgia', serif;
+      font-family: 'Cormorant Garamond', 'Palatino Linotype', serif;
       font-style: italic;
       font-size: 20px;
-      color: rgba(245, 240, 225, 0.9);
+      color: rgba(245, 240, 225, 0.92);
       font-weight: 300;
       letter-spacing: 0.06em;
-      margin-bottom: 4px;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+      margin-bottom: 2px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
     }
     .families {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 11px;
-      letter-spacing: 0.38em;
+      font-size: 10.5px;
+      letter-spacing: 0.4em;
       text-transform: uppercase;
-      color: #9BB3A4;
-      margin-bottom: 16px;
+      color: #A3BFB0;
+      margin-bottom: 14px;
       font-weight: 500;
     }
 
-    /* Ornate Filigree Gold Divider */
+    /* Luxury Multi-Layer Gold Divider */
     .divider {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 220px;
-      margin: 0 auto 16px;
-      opacity: 0.85;
+      width: 260px;
+      margin: 0 auto 14px;
     }
     .divider-line {
       flex: 1;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(236, 195, 90, 0.7));
+      background: linear-gradient(90deg, transparent, #ECC35A);
     }
     .divider-line.right {
-      background: linear-gradient(270deg, transparent, rgba(236, 195, 90, 0.7));
+      background: linear-gradient(270deg, transparent, #ECC35A);
+    }
+    .divider-center {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0 12px;
+    }
+    .dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: #ECC35A;
+      box-shadow: 0 0 4px #ECC35A;
     }
     .divider-diamond {
-      width: 7px;
-      height: 7px;
-      border: 1px solid #ECC35A;
-      background: #092C18;
+      width: 8px;
+      height: 8px;
+      border: 1px solid #FFE58F;
+      background: #0d381f;
       transform: rotate(45deg);
-      margin: 0 10px;
-      box-shadow: 0 0 8px rgba(236, 195, 90, 0.5);
+      box-shadow: 0 0 8px rgba(236, 195, 90, 0.6);
     }
 
-    /* Stately Couple Names */
+    /* Stately Couple Names with Gold & Frost Luminous Transitions */
     .couple-names {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     .name {
       font-family: 'Cormorant Garamond', 'Palatino Linotype', 'Georgia', serif;
-      font-size: 72px;
+      font-size: 74px;
       font-weight: 500;
-      color: #FFFFFF;
       letter-spacing: 0.035em;
       line-height: 1.05;
-      text-shadow: 
-        0 0 25px rgba(255, 255, 255, 0.4),
-        0 0 50px rgba(230, 205, 140, 0.25),
-        0 4px 12px rgba(0, 0, 0, 0.9);
+      /* Pearlescent Frost Silver Gradient Fill */
+      background: linear-gradient(180deg, #FFFFFF 0%, #F4F7F5 55%, #DCE6E0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.45)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9));
     }
     .ampersand {
-      font-family: 'Cormorant Garamond', 'Palatino Linotype', 'Georgia', serif;
+      font-family: 'Cormorant Garamond', 'Palatino Linotype', serif;
       font-style: italic;
-      font-size: 40px;
-      color: #ECC35A;
-      margin: -2px 0;
-      text-shadow: 0 0 16px rgba(236, 195, 90, 0.6);
+      font-size: 42px;
+      margin: -4px 0;
+      /* Radiant Gold Shimmer Gradient */
+      background: linear-gradient(135deg, #FFF6D8 0%, #ECC35A 50%, #C99A24 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 14px rgba(236, 195, 90, 0.7));
     }
 
-    /* Event Details */
+    /* Celebration & Details */
     .details {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
     .celebration {
-      font-family: 'Cormorant Garamond', 'Palatino Linotype', 'Georgia', serif;
+      font-family: 'Cormorant Garamond', 'Palatino Linotype', serif;
       font-style: italic;
       font-size: 22px;
       color: rgba(245, 240, 225, 0.95);
       letter-spacing: 0.08em;
       margin-bottom: 8px;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
     }
-    .date {
+
+    /* Gold-Bordered Date Badge */
+    .date-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 22px;
+      border: 1px solid rgba(236, 195, 90, 0.45);
+      border-radius: 9999px;
+      background: rgba(6, 32, 16, 0.7);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(236, 195, 90, 0.15);
+      margin-bottom: 7px;
+    }
+    .date-text {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13.5px;
-      letter-spacing: 0.32em;
+      font-size: 13px;
+      letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: #F8FAFC;
+      color: #FFF;
       font-weight: 600;
-      margin-bottom: 5px;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
     }
+
     .venue {
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 11.5px;
-      letter-spacing: 0.26em;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: #A3BFB0;
+      color: #B2CEBF;
       font-weight: 500;
       text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
     }
@@ -209,33 +298,88 @@
 <body>
   <div class="og-container">
     <div class="bg-texture"></div>
-    <div class="outer-frame"></div>
-    <div class="inner-frame"></div>
-    <div class="corner-diamond top-left"></div>
-    <div class="corner-diamond top-right"></div>
-    <div class="corner-diamond bottom-left"></div>
-    <div class="corner-diamond bottom-right"></div>
 
+    <!-- Ambient Floating Stars -->
+    <div class="starlight star-1"></div>
+    <div class="starlight star-2"></div>
+    <div class="starlight star-3"></div>
+    <div class="starlight star-4"></div>
+    <div class="starlight star-5"></div>
+    <div class="starlight star-6"></div>
+
+    <!-- Concentric Multi-Tier Borders -->
+    <div class="outer-frame"></div>
+    <div class="middle-frame"></div>
+    <div class="inner-frame"></div>
+
+    <!-- Ornate Arabesque Corner Filigree SVGs -->
+    <svg class="corner-flourish flourish-tl" viewBox="0 0 48 48" fill="none">
+      <path d="M4 4H28C28 14 20 22 10 22V44" stroke="#ECC35A" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M12 12C16 12 19 15 19 19" stroke="#ECC35A" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="8" cy="8" r="2" fill="#ECC35A"/>
+      <circle cx="28" cy="4" r="1.5" fill="#FFE58F"/>
+      <circle cx="10" cy="44" r="1.5" fill="#FFE58F"/>
+    </svg>
+    <svg class="corner-flourish flourish-tr" viewBox="0 0 48 48" fill="none">
+      <path d="M4 4H28C28 14 20 22 10 22V44" stroke="#ECC35A" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M12 12C16 12 19 15 19 19" stroke="#ECC35A" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="8" cy="8" r="2" fill="#ECC35A"/>
+      <circle cx="28" cy="4" r="1.5" fill="#FFE58F"/>
+      <circle cx="10" cy="44" r="1.5" fill="#FFE58F"/>
+    </svg>
+    <svg class="corner-flourish flourish-bl" viewBox="0 0 48 48" fill="none">
+      <path d="M4 4H28C28 14 20 22 10 22V44" stroke="#ECC35A" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M12 12C16 12 19 15 19 19" stroke="#ECC35A" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="8" cy="8" r="2" fill="#ECC35A"/>
+      <circle cx="28" cy="4" r="1.5" fill="#FFE58F"/>
+      <circle cx="10" cy="44" r="1.5" fill="#FFE58F"/>
+    </svg>
+    <svg class="corner-flourish flourish-br" viewBox="0 0 48 48" fill="none">
+      <path d="M4 4H28C28 14 20 22 10 22V44" stroke="#ECC35A" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M12 12C16 12 19 15 19 19" stroke="#ECC35A" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="8" cy="8" r="2" fill="#ECC35A"/>
+      <circle cx="28" cy="4" r="1.5" fill="#FFE58F"/>
+      <circle cx="10" cy="44" r="1.5" fill="#FFE58F"/>
+    </svg>
+
+    <!-- Central Square-Safe Content Box -->
     <div class="content-box">
+      <!-- Monogram Crest -->
+      <div class="monogram-badge">
+        <div class="monogram-wing"></div>
+        <div class="monogram-circle">N &amp; R</div>
+        <div class="monogram-wing right"></div>
+      </div>
+
+      <!-- Bismillah Arabic Calligraphy -->
       <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
       <div class="sub-blessing">With the Blessings of the Almighty</div>
       <div class="families">TOGETHER WITH THEIR FAMILIES</div>
 
+      <!-- Multi-Layer Gold Divider -->
       <div class="divider">
         <div class="divider-line"></div>
-        <div class="divider-diamond"></div>
+        <div class="divider-center">
+          <div class="dot"></div>
+          <div class="divider-diamond"></div>
+          <div class="dot"></div>
+        </div>
         <div class="divider-line right"></div>
       </div>
 
+      <!-- Stately Couple Names -->
       <div class="couple-names">
         <div class="name">Nisma Ayisha</div>
         <div class="ampersand">&amp;</div>
         <div class="name">Mohammed Rashid</div>
       </div>
 
+      <!-- Event Details & Gold-Bordered Date Badge -->
       <div class="details">
         <div class="celebration">A Celebration of Nikah</div>
-        <div class="date">SUNDAY, 13 DECEMBER 2026</div>
+        <div class="date-badge">
+          <span class="date-text">SUNDAY, 13 DECEMBER 2026</span>
+        </div>
         <div class="venue">SAGAR AUDITORIUM • PANEMANGALORE</div>
       </div>
     </div>

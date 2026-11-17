@@ -17,6 +17,15 @@ export const CoverLandingPage: React.FC<CoverLandingPageProps> = ({ onOpenInvita
       {/* Decorative Outer Border Card Frame */}
       <div className="relative w-full max-w-xl md:max-w-2xl mx-auto py-8 sm:py-12 px-4 sm:px-10 flex flex-col items-center">
         
+        {/* Royal Monogram Badge */}
+        <div className="flex items-center justify-center space-x-3 mb-5 opacity-90">
+          <div className="w-10 sm:w-16 h-[1px] bg-gradient-to-r from-transparent to-amber-300/60" />
+          <div className="w-8 h-8 rounded-full border border-amber-300/60 bg-gradient-to-br from-emerald-900 to-emerald-950 flex items-center justify-center shadow-[0_0_12px_rgba(245,215,127,0.3)]">
+            <span className="font-serif text-xs font-semibold text-amber-200 tracking-wider">N &amp; R</span>
+          </div>
+          <div className="w-10 sm:w-16 h-[1px] bg-gradient-to-l from-transparent to-amber-300/60" />
+        </div>
+
         {/* Top: Bismillah Arabic Calligraphy */}
         <div className="mb-4">
           <h1
@@ -38,24 +47,26 @@ export const CoverLandingPage: React.FC<CoverLandingPageProps> = ({ onOpenInvita
           TOGETHER WITH THEIR FAMILIES
         </p>
 
-        {/* Delicate Diamond Divider in Frost Silver */}
-        <div className="flex items-center justify-center w-44 sm:w-64 mx-auto mb-6 sm:mb-8 opacity-75">
-          <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-frost-border-light" />
-          <div className="mx-3 flex items-center justify-center">
-            <div className="w-1.5 h-1.5 rotate-45 border border-frost-border-light bg-[#082213]" />
+        {/* Delicate Diamond Divider in Gold & Frost Silver */}
+        <div className="flex items-center justify-center w-48 sm:w-64 mx-auto mb-6 sm:mb-8 opacity-85">
+          <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-amber-300/40 to-amber-300/70" />
+          <div className="mx-3 flex items-center justify-center space-x-1.5">
+            <div className="w-1 h-1 rounded-full bg-amber-300/70" />
+            <div className="w-2 h-2 rotate-45 border border-amber-300 bg-[#082213] shadow-[0_0_8px_rgba(245,215,127,0.4)]" />
+            <div className="w-1 h-1 rounded-full bg-amber-300/70" />
           </div>
-          <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-frost-border-light" />
+          <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-amber-300/40 to-amber-300/70" />
         </div>
 
-        {/* Couple's Names: Title Case, Luminous Frost Silver */}
+        {/* Couple's Names: Title Case, Luminous Frost Silver with Gold Ampersand */}
         <div className="my-2 sm:my-3 flex flex-col items-center w-full">
           <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-frost-bright tracking-wide leading-tight text-luminous">
             Nisma Ayisha
           </h2>
 
-          <div className="my-1.5 sm:my-2.5">
-            <span className="font-serif italic text-2xl sm:text-3xl md:text-4xl text-frost-muted font-light">
-              &
+          <div className="my-2 sm:my-3">
+            <span className="font-serif italic text-3xl sm:text-4xl md:text-5xl bg-gradient-to-br from-amber-100 via-amber-300 to-amber-500 bg-clip-text text-transparent font-normal drop-shadow-[0_0_12px_rgba(245,215,127,0.5)]">
+              &amp;
             </span>
           </div>
 
@@ -65,12 +76,17 @@ export const CoverLandingPage: React.FC<CoverLandingPageProps> = ({ onOpenInvita
         </div>
 
         {/* A Celebration of Nikah */}
-        <div className="mt-6 sm:mt-8 mb-8 sm:mb-10 flex flex-col items-center">
-          <p className="font-serif italic text-base sm:text-lg text-frost/90 font-light tracking-wider mb-1">
+        <div className="mt-6 sm:mt-8 mb-7 sm:mb-9 flex flex-col items-center">
+          <p className="font-serif italic text-base sm:text-lg text-frost/90 font-light tracking-wider mb-2">
             A Celebration of Nikah
           </p>
-          <p className="font-sans text-xs sm:text-sm tracking-[0.35em] text-frost-muted font-medium uppercase">
-            13 DECEMBER 2026
+          <div className="inline-flex items-center justify-center px-4 sm:px-6 py-1.5 rounded-full border border-amber-300/40 bg-emerald-950/60 shadow-[0_4px_16px_rgba(0,0,0,0.5)] mb-2">
+            <span className="font-sans text-[11px] sm:text-xs tracking-[0.3em] text-frost-bright font-semibold uppercase">
+              SUNDAY, 13 DECEMBER 2026
+            </span>
+          </div>
+          <p className="font-sans text-[10px] sm:text-[11px] tracking-[0.25em] text-frost-muted uppercase">
+            SAGAR AUDITORIUM • PANEMANGALORE
           </p>
         </div>
 
