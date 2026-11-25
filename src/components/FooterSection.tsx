@@ -80,6 +80,9 @@ export const FooterSection: React.FC = () => {
           <p className="mt-4 text-[11px] sm:text-xs tracking-widest uppercase text-frost-bright font-sans font-medium text-luminous">
             The Wedding of Nisma Ayisha & Mohammed Rashid • 2026
           </p>
+          <p className="mt-2 text-[10px] sm:text-[11px] tracking-wider text-white/30 font-sans font-light">
+            (©) moizzahmed
+          </p>
         </div>
 
       </div>
